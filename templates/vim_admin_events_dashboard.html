@@ -1,0 +1,250 @@
+{% extends 'admin_base.html' %}
+
+{% block title %} Admin Dashboard {% endblock %}
+
+{% block content %} 
+<title>Invoice Events Browser</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+}
+
+.header{
+    background:#003366;
+    color:white;
+    padding:15px;
+}
+
+.header h2{
+    margin:0;
+}
+
+.toolbar{
+    background:white;
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.toolbar input,
+.toolbar select{
+    padding:8px;
+    margin-right:10px;
+}
+
+.event-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+.event-table th{
+    background:#004c99;
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+.event-table td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.event-table tr:hover{
+    background:#f5f9ff;
+}
+
+.severity{
+    color:white;
+    font-weight:bold;
+    padding:4px 10px;
+    border-radius:4px;
+}
+
+.critical{
+    background:#d32f2f;
+}
+
+.major{
+    background:#f57c00;
+}
+
+.minor{
+    background:#fbc02d;
+    color:black;
+}
+
+.warning{
+    background:#1976d2;
+}
+
+.normal{
+    background:#388e3c;
+}
+
+.status-open{
+    color:red;
+    font-weight:bold;
+}
+
+.status-ack{
+    color:#ff9800;
+    font-weight:bold;
+}
+
+.status-closed{
+    color:green;
+    font-weight:bold;
+}
+
+.event-details{
+    margin:20px;
+    padding:15px;
+    background:white;
+    border-left:5px solid #004c99;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h2>🚨 Invoice Events Browser</h2>
+</div>
+
+<div class="toolbar">
+
+    <input type="text" placeholder="Search Events">
+
+    <select>
+        <option>All Severities</option>
+        <option>Critical</option>
+        <option>Major</option>
+        <option>Minor</option>
+        <option>Warning</option>
+        <option>Normal</option>
+    </select>
+
+    <select>
+        <option>All Status</option>
+        <option>Open</option>
+        <option>Acknowledged</option>
+        <option>Closed</option>
+    </select>
+
+</div>
+
+<table class="event-table">
+
+<thead>
+<tr>
+    <th>Severity</th>
+    <th>Event ID</th>
+    <th>Time</th>
+    <th>Invoice</th>
+    <th>Category</th>
+    <th>Source</th>
+    <th>Description</th>
+    <th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td>
+        <span class="severity critical">Critical</span>
+    </td>
+    <td>EVT1001</td>
+    <td>12-Jun-2026 10:12</td>
+    <td>INV-2026-001</td>
+    <td>Validation</td>
+    <td>Invoice Validator</td>
+    <td>Duplicate Invoice Detected</td>
+    <td class="status-open">Open</td>
+</tr>
+
+<tr>
+    <td>
+        <span class="severity major">Major</span>
+    </td>
+    <td>EVT1002</td>
+    <td>12-Jun-2026 10:15</td>
+    <td>INV-2026-002</td>
+    <td>OCR</td>
+    <td>Document Extractor</td>
+    <td>Invoice Number Not Found</td>
+    <td class="status-ack">Acknowledged</td>
+</tr>
+
+<tr>
+    <td>
+        <span class="severity minor">Minor</span>
+    </td>
+    <td>EVT1003</td>
+    <td>12-Jun-2026 10:17</td>
+    <td>INV-2026-003</td>
+    <td>Validation</td>
+    <td>Business Rules Engine</td>
+    <td>Vendor GST Mismatch</td>
+    <td class="status-open">Open</td>
+</tr>
+
+<tr>
+    <td>
+        <span class="severity warning">Warning</span>
+    </td>
+    <td>EVT1004</td>
+    <td>12-Jun-2026 10:20</td>
+    <td>INV-2026-004</td>
+    <td>Workflow</td>
+    <td>Approval Engine</td>
+    <td>Approval SLA Exceeded</td>
+    <td class="status-open">Open</td>
+</tr>
+
+<tr>
+    <td>
+        <span class="severity normal">Normal</span>
+    </td>
+    <td>EVT1005</td>
+    <td>12-Jun-2026 10:25</td>
+    <td>INV-2026-005</td>
+    <td>Workflow</td>
+    <td>Approval Engine</td>
+    <td>Invoice Approved Successfully</td>
+    <td class="status-closed">Closed</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="event-details">
+
+<h3>Event Details</h3>
+
+<p><strong>Event ID:</strong> EVT1001</p>
+
+<p><strong>Invoice:</strong> INV-2026-001</p>
+
+<p><strong>Severity:</strong> Critical</p>
+
+<p><strong>Source:</strong> Invoice Validator</p>
+
+<p><strong>Description:</strong>
+Duplicate invoice detected. Invoice number already exists in the system.
+</p>
+
+<p><strong>Recommended Action:</strong>
+Review invoice history and reject duplicate submission.
+</p>
+
+</div>
+
+{% endblock %}

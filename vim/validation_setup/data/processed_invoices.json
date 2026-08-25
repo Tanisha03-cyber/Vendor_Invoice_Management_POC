@@ -1,0 +1,32 @@
+[
+    {
+        "invoice_id": 3,
+        "invoice_number": "BOS-2026-1009",
+        "vendor_id": 4,
+        "processed_at": "2026-08-25T13:15:16.828769"
+    },
+    {
+        "invoice_id": 4,
+        "invoice_number": "BOS-2026-1010",
+        "vendor_id": 4,
+        "processed_at": "2026-08-25T13:15:17.120880"
+    },
+    {
+        "invoice_id": 5,
+        "invoice_number": "BOS-2026-1008",
+        "vendor_id": 4,
+        "processed_at": "2026-08-25T13:15:17.241433"
+    },
+    {
+        "invoice_id": 6,
+        "invoice_number": "BOS-2026-1006",
+        "vendor_id": 4,
+        "processed_at": "2026-08-25T13:15:17.583853"
+    },
+    {
+        "invoice_id": 9,
+        "invoice_number": "BOS-2026-1001",
+        "vendor_id": 4,
+        "processed_at": "2026-08-25T13:49:41.286795"
+    }
+]
