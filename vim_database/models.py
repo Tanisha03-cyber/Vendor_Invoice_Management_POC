@@ -287,6 +287,7 @@ class ValidationResult(db.Model):
     ValidationDetails = db.Column(db.JSON,nullable=True)
     ValidationDate = db.Column(db.DateTime,default=datetime.utcnow)
     invoice = db.relationship("Invoice", back_populates="validations")
+    StageStatus = db.Column(db.String(20),nullable=True,default="started")
 
     def __repr__(self):
         return f"<ValidationResult {self.ValidationID}>"
