@@ -21,13 +21,37 @@ def save_validation_results(invoice, validation_result):
 
     for result in results:
 
+        # --------------------------------------------------
+        # Stage Status
+        # --------------------------------------------------
+        #
+        # For now, this is derived from the existing
+        # validation status.
+        #
+        # Later we can update this directly from each
+        # stage when the stage starts/completes/fails.
+        # --------------------------------------------------
+
+        validation_status = result.get("status")
+
+        if validation_status == "FAILED":
+            stage_status = "failed"
+
+        else:
+            stage_status = "completed"
+
         validation_record = ValidationResult(
             InvoiceID=invoice_id,
             InvoiceNumber=invoice_number,
             ValidationType=result.get("stage"),
-            ValidationStatus=result.get("status"),
+
+            # Existing logic - UNCHANGED
+            ValidationStatus=validation_status,
             ValidationMessage=result.get("message"),
-            ValidationDetails=result.get("details", {})
+            ValidationDetails=result.get("details", {}),
+
+            # NEW COLUMN ONLY
+            StageStatus=stage_status
         )
 
         db.session.add(validation_record)
