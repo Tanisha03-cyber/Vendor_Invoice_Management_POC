@@ -32,6 +32,8 @@ Invoice Validation
         >
             🔄 Refresh
         </a>
+        
+        <a class="button" href="{{ url_for('admin_activities') }}">← Back to Admin Dashboard</a>
 
     </div>
 
@@ -59,8 +61,6 @@ Invoice Validation
 
                     <tr>
 
-                        <th>Validation ID</th>
-
                         <th>Invoice ID</th>
 
                         <th>Invoice Number</th>
@@ -83,10 +83,6 @@ Invoice Validation
                     {% for result in validation_results %}
 
                     <tr>
-
-                        <td>
-                            {{ result.validation_id or "-" }}
-                        </td>
 
                         <td>
                             {{ result.invoice_id or "-" }}
