@@ -17,11 +17,11 @@
         <a class="button" href="/admin/users">Open</a>
     </div>
 
-   <div class="card">
+   <!-- <div class="card">
         <h3>⚙️ System Configuration</h3>
         <p>Manage application settings, AI models, OCR providers, and workflow parameters.</p>
         <a class="button" href="/admin/settings">Open</a>
-    </div>
+   </div> -->
 	
     <div class="card">
         <h3>📄 Invoice Upload</h3>
@@ -42,26 +42,27 @@
     </div>
 
     <div class="card">
+		<h3>🚨 Validation Issues & Exceptions</h3>
+		<p>Monitor invoice validation failures, data quality issues, duplicate invoices, and processing exceptions.</p>
+		<a class="button" href="/admin/issues">Open</a>
+	</div>
+
+    <div class="card">
         <h3>🧠 AI Assistant (RAG)</h3>
         <p>Ask questions about invoices, policies, vendors, and documents using AI-powered search.</p>
         <a class="button" href="/admin/ai_assistant">Open</a>
     </div>
 
-    <div class="card">
+    <!-- <div class="card">
         <h3>📚 Knowledge Base</h3>
         <p>Manage policies, contracts, vendor documents, and RAG knowledge sources.</p>
         <a class="button" href="/admin/knowledgebase">Open</a>
-    </div>
+    </div> -->
 
     <div class="card">
-        <h3>📈 Dashboard</h3>
+        <h3>📈 Analytics & Dashboard</h3>
         <p>Monitor invoice processing status, pending approvals, and business KPIs in real time.</p>
-        <a class="button" href="/admin/dashboard">Open</a>
+        <a class="button" href="{{ url_for('admin_kpi_dashboard') }}">Open</a>
     </div>
-	<div class="card">
-		<h3>🚨 Validation Issues & Exceptions</h3>
-		<p>Monitor invoice validation failures, data quality issues, duplicate invoices, and processing exceptions.</p>
-		<a class="button" href="/admin/issues">Open</a>
-	</div>
 </div>
 {% endblock %}

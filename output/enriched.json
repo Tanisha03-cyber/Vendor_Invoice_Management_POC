@@ -65,8 +65,8 @@
     "extra_fields_confidence": {},
     "raw_text": "```\nMETASIS INFORMATION SYSTEMS LLC\n5550 Granite Parkway, Suite #105, Plano, TX 75024, USA\nEmail: invoices@metasisinfo.com | Phone: (201) 528-5314\n\nBILL OF SUPPLY\nInvoice No: BOS-2026-1009\nInvoice Date: 06/09/2026\nCustomer: Prime Solutions\nAddress: Phoenix, AZ\n\n| Description               | Qty | Rate ($) | Amount ($) |\n|---------------------------|-----|----------|------------|\n| Application Maintenance    | 38  | 70       | 2660       |\n\nTotal Amount Due: $2660\nThank you for your business.\n```",
     "file_name": "BOS-2026-1009.pdf",
-    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\5804722c78c94bf28f6dac11799abc7f_BOS-2026-1009.pdf",
-    "stored_file_name": "5804722c78c94bf28f6dac11799abc7f_BOS-2026-1009.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\5219f2ebc861423c8c850306502d6eca_BOS-2026-1009.pdf",
+    "stored_file_name": "5219f2ebc861423c8c850306502d6eca_BOS-2026-1009.pdf",
     "invoice_id": 3,
     "status": "success"
   },
@@ -102,48 +102,46 @@
       }
     ],
     "extra_fields": {
-      "title": "BILL OF SUPPLY",
-      "note": "Thank you for your business."
+      "title": "BILL OF SUPPLY"
     },
     "field_confidence": {
-      "vendor_name": 99,
+      "vendor_name": 98,
       "invoice_number": 99,
       "invoice_date": 99,
       "due_date": null,
       "billing_period_start": null,
       "billing_period_end": null,
       "account_number": null,
-      "customer_name": 99,
-      "bill_to_address": 99,
-      "subtotal": 98,
+      "customer_name": 98,
+      "bill_to_address": 97,
+      "subtotal": 97,
       "tax_total": null,
       "total_due": 99,
       "previous_balance": null,
       "payment_received": null,
-      "currency": 99,
+      "currency": 95,
       "po_number": null,
       "invoice_status": null,
       "vendor_gst_number": null,
-      "vendor_address": 99,
-      "vendor_email": 98,
-      "vendor_phone_number": 98
+      "vendor_address": 96,
+      "vendor_email": 95,
+      "vendor_phone_number": 95
     },
     "line_items_confidence": [
       {
         "description": 99,
-        "quantity": 99,
-        "unit_price": 99,
+        "quantity": 98,
+        "unit_price": 98,
         "amount": 99
       }
     ],
     "extra_fields_confidence": {
-      "title": 95,
-      "note": 95
+      "title": 95
     },
     "raw_text": "```\nMETASIS INFORMATION SYSTEMS LLC\n5550 Granite Parkway, Suite #105, Plano, TX 75024, USA\nEmail: invoices@metasisinfo.com | Phone: (201) 528-5314\n\nBILL OF SUPPLY\nInvoice No: BOS-2026-1010\nInvoice Date: 06/10/2026\nCustomer: Oceanic Systems\nAddress: Miami, FL\n\n| Description         | Qty | Rate ($) | Amount ($) |\n|---------------------|-----|----------|------------|\n| Training Services    | 16  | 110      | 1760       |\n\nTotal Amount Due: $1760\nThank you for your business.\n```",
     "file_name": "BOS-2026-1010.pdf",
-    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\cfa748ab1b0d4ef092d67dcbe3134920_BOS-2026-1010.pdf",
-    "stored_file_name": "cfa748ab1b0d4ef092d67dcbe3134920_BOS-2026-1010.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\f36dcaaa8287414bbeef87791367b487_BOS-2026-1010.pdf",
+    "stored_file_name": "f36dcaaa8287414bbeef87791367b487_BOS-2026-1010.pdf",
     "invoice_id": 4,
     "status": "success"
   },
@@ -179,84 +177,7 @@
       }
     ],
     "extra_fields": {
-      "document_title": "BILL OF SUPPLY",
-      "thank_you_note": "Thank you for your business."
-    },
-    "field_confidence": {
-      "vendor_name": 98,
-      "invoice_number": 99,
-      "invoice_date": 99,
-      "due_date": null,
-      "billing_period_start": null,
-      "billing_period_end": null,
-      "account_number": null,
-      "customer_name": 98,
-      "bill_to_address": 97,
-      "subtotal": 95,
-      "tax_total": null,
-      "total_due": 95,
-      "previous_balance": null,
-      "payment_received": null,
-      "currency": 95,
-      "po_number": null,
-      "invoice_status": null,
-      "vendor_gst_number": null,
-      "vendor_address": 96,
-      "vendor_email": 97,
-      "vendor_phone_number": 96
-    },
-    "line_items_confidence": [
-      {
-        "description": 98,
-        "quantity": 98,
-        "unit_price": 98,
-        "amount": 98
-      }
-    ],
-    "extra_fields_confidence": {
-      "document_title": 95,
-      "thank_you_note": 95
-    },
-    "raw_text": "```\nMETASIS INFORMATION SYSTEMS LLC\n5550 Granite Parkway, Suite #105, Plano, TX 75024, USA\nEmail: invoices@metasisinfo.com | Phone: (201) 528-5314\n\nBILL OF SUPPLY\nInvoice No: BOS-2026-1008\nInvoice Date: 06/08/2026\nCustomer: Skyline Energy\nAddress: Austin, TX\n\n| Description              | Qty | Rate ($) | Amount ($) |\n|--------------------------|-----|----------|------------|\n| Technical Consulting      | 30  | 95       | 2850       |\n\nTotal Amount Due: $2850\nThank you for your business.\n```",
-    "file_name": "BOS-2026-1008.pdf",
-    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\3c1c6229f36a4a309dbaf8d6bb2fbe37_BOS-2026-1008.pdf",
-    "stored_file_name": "3c1c6229f36a4a309dbaf8d6bb2fbe37_BOS-2026-1008.pdf",
-    "invoice_id": 5,
-    "status": "success"
-  },
-  {
-    "vendor_name": "METASIS INFORMATION SYSTEMS LLC",
-    "invoice_number": "BOS-2026-1006",
-    "invoice_date": "2026-06-06",
-    "due_date": null,
-    "billing_period_start": null,
-    "billing_period_end": null,
-    "account_number": null,
-    "customer_name": "GreenLeaf Foods",
-    "bill_to_address": "Denver, CO",
-    "subtotal": 2100.0,
-    "tax_total": null,
-    "total_due": 2100.0,
-    "previous_balance": null,
-    "payment_received": null,
-    "currency": "USD",
-    "po_number": null,
-    "invoice_status": null,
-    "vendor_gst_number": null,
-    "vendor_address": "5550 Granite Parkway, Suite #105, Plano, TX 75024, USA",
-    "vendor_email": "invoices@metasisinfo.com",
-    "vendor_phone_number": "(201) 528-5314",
-    "vendor_id": 4,
-    "line_items": [
-      {
-        "description": "QA Testing",
-        "quantity": 35,
-        "unit_price": 60.0,
-        "amount": 2100.0
-      }
-    ],
-    "extra_fields": {
-      "document_type": "BILL OF SUPPLY",
+      "title": "BILL OF SUPPLY",
       "thank_you_note": "Thank you for your business."
     },
     "field_confidence": {
@@ -291,13 +212,84 @@
       }
     ],
     "extra_fields_confidence": {
-      "document_type": 95,
-      "thank_you_note": 95
+      "title": 90,
+      "thank_you_note": 90
     },
+    "raw_text": "```\nMETASIS INFORMATION SYSTEMS LLC\n5550 Granite Parkway, Suite #105, Plano, TX 75024, USA\nEmail: invoices@metasisinfo.com | Phone: (201) 528-5314\n\nBILL OF SUPPLY\nInvoice No: BOS-2026-1008\nInvoice Date: 06/08/2026\nCustomer: Skyline Energy\nAddress: Austin, TX\n\n| Description              | Qty | Rate ($) | Amount ($) |\n|--------------------------|-----|----------|------------|\n| Technical Consulting      | 30  | 95       | 2850       |\n\nTotal Amount Due: $2850\nThank you for your business.\n```",
+    "file_name": "BOS-2026-1008.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\c557ec1384dc456897aa37e9d30a746a_BOS-2026-1008.pdf",
+    "stored_file_name": "c557ec1384dc456897aa37e9d30a746a_BOS-2026-1008.pdf",
+    "invoice_id": 5,
+    "status": "success"
+  },
+  {
+    "vendor_name": "METASIS INFORMATION SYSTEMS LLC",
+    "invoice_number": "BOS-2026-1006",
+    "invoice_date": "2026-06-06",
+    "due_date": null,
+    "billing_period_start": null,
+    "billing_period_end": null,
+    "account_number": null,
+    "customer_name": "GreenLeaf Foods",
+    "bill_to_address": "Denver, CO",
+    "subtotal": 2100.0,
+    "tax_total": null,
+    "total_due": 2100.0,
+    "previous_balance": null,
+    "payment_received": null,
+    "currency": "USD",
+    "po_number": null,
+    "invoice_status": null,
+    "vendor_gst_number": null,
+    "vendor_address": "5550 Granite Parkway, Suite #105, Plano, TX 75024, USA",
+    "vendor_email": "invoices@metasisinfo.com",
+    "vendor_phone_number": "(201) 528-5314",
+    "vendor_id": 4,
+    "line_items": [
+      {
+        "description": "QA Testing",
+        "quantity": 35,
+        "unit_price": 60.0,
+        "amount": 2100.0
+      }
+    ],
+    "extra_fields": {},
+    "field_confidence": {
+      "vendor_name": 99,
+      "invoice_number": 99,
+      "invoice_date": 99,
+      "due_date": null,
+      "billing_period_start": null,
+      "billing_period_end": null,
+      "account_number": null,
+      "customer_name": 99,
+      "bill_to_address": 98,
+      "subtotal": 98,
+      "tax_total": null,
+      "total_due": 99,
+      "previous_balance": null,
+      "payment_received": null,
+      "currency": 99,
+      "po_number": null,
+      "invoice_status": null,
+      "vendor_gst_number": null,
+      "vendor_address": 99,
+      "vendor_email": 98,
+      "vendor_phone_number": 98
+    },
+    "line_items_confidence": [
+      {
+        "description": 99,
+        "quantity": 99,
+        "unit_price": 99,
+        "amount": 99
+      }
+    ],
+    "extra_fields_confidence": {},
     "raw_text": "```\nMETASIS INFORMATION SYSTEMS LLC\n5550 Granite Parkway, Suite #105, Plano, TX 75024, USA\nEmail: invoices@metasisinfo.com | Phone: (201) 528-5314\n\nBILL OF SUPPLY\nInvoice No: BOS-2026-1006\nInvoice Date: 06/06/2026\nCustomer: GreenLeaf Foods\nAddress: Denver, CO\n\n| Description     | Qty | Rate ($) | Amount ($) |\n|------------------|-----|----------|------------|\n| QA Testing       | 35  | 60       | 2100       |\n\nTotal Amount Due: $2100\nThank you for your business.\n```",
     "file_name": "BOS-2026-1006.pdf",
-    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\ca16db0fe0ad401f902b4c2ced6cdba6_BOS-2026-1006.pdf",
-    "stored_file_name": "ca16db0fe0ad401f902b4c2ced6cdba6_BOS-2026-1006.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\d9163277349e44e5ab61dcc4dbb8b971_BOS-2026-1006.pdf",
+    "stored_file_name": "d9163277349e44e5ab61dcc4dbb8b971_BOS-2026-1006.pdf",
     "invoice_id": 6,
     "status": "success"
   },
@@ -377,5 +369,474 @@
     "stored_file_name": "3196b72010b54b9da2793c6673a03dcb_BOS-2026-1001.pdf",
     "invoice_id": 9,
     "status": "success"
+  },
+  {
+    "vendor_name": "METASIS INFORMATION SYSTEMS LLC",
+    "invoice_number": "BOS-2026-1005",
+    "invoice_date": "2026-06-05",
+    "due_date": null,
+    "billing_period_start": null,
+    "billing_period_end": null,
+    "account_number": null,
+    "customer_name": "Vertex Finance",
+    "bill_to_address": "New York, NY",
+    "subtotal": 3825.0,
+    "tax_total": null,
+    "total_due": 3825.0,
+    "previous_balance": null,
+    "payment_received": null,
+    "currency": "USD",
+    "po_number": null,
+    "invoice_status": null,
+    "vendor_gst_number": null,
+    "vendor_address": "5550 Granite Parkway, Suite #105, Plano, TX 75024, USA",
+    "vendor_email": "invoices@metasisinfo.com",
+    "vendor_phone_number": "(201) 528-5314",
+    "vendor_id": 4,
+    "line_items": [
+      {
+        "description": "Data Engineering",
+        "quantity": 45,
+        "unit_price": 85.0,
+        "amount": 3825.0
+      }
+    ],
+    "extra_fields": {},
+    "field_confidence": {
+      "vendor_name": 98,
+      "invoice_number": 98,
+      "invoice_date": 98,
+      "due_date": null,
+      "billing_period_start": null,
+      "billing_period_end": null,
+      "account_number": null,
+      "customer_name": 98,
+      "bill_to_address": 98,
+      "subtotal": 97,
+      "tax_total": null,
+      "total_due": 97,
+      "previous_balance": null,
+      "payment_received": null,
+      "currency": 98,
+      "po_number": null,
+      "invoice_status": null,
+      "vendor_gst_number": null,
+      "vendor_address": 98,
+      "vendor_email": 98,
+      "vendor_phone_number": 98
+    },
+    "line_items_confidence": [
+      {
+        "description": 98,
+        "quantity": 98,
+        "unit_price": 98,
+        "amount": 98
+      }
+    ],
+    "extra_fields_confidence": {},
+    "raw_text": "```\nMETASIS INFORMATION SYSTEMS LLC\n5550 Granite Parkway, Suite #105, Plano, TX 75024, USA\nEmail: invoices@metasisinfo.com | Phone: (201) 528-5314\n\nBILL OF SUPPLY\nInvoice No: BOS-2026-1005\nInvoice Date: 06/05/2026\nCustomer: Vertex Finance\nAddress: New York, NY\n\n| Description          | Qty | Rate ($) | Amount ($) |\n|----------------------|-----|----------|------------|\n| Data Engineering     | 45  | 85       | 3825       |\n\nTotal Amount Due: $3825\nThank you for your business.\n```",
+    "file_name": "BOS-2026-1005.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\07868e6d6a0b4d81995107158fc6a1a0_BOS-2026-1005.pdf",
+    "stored_file_name": "07868e6d6a0b4d81995107158fc6a1a0_BOS-2026-1005.pdf",
+    "invoice_id": 11,
+    "status": "success"
+  },
+  {
+    "vendor_name": "SPAR INFORMATION SYSTEMS INDIA PRIVATE LIMITED",
+    "invoice_number": null,
+    "invoice_date": null,
+    "due_date": null,
+    "billing_period_start": null,
+    "billing_period_end": null,
+    "account_number": null,
+    "customer_name": null,
+    "bill_to_address": "Unit A4, A-Block, 4th Floor\nIIT Madras Research Park\nKanagam Road, Taramani,\nChennai\n600 113",
+    "subtotal": 15300.0,
+    "tax_total": null,
+    "total_due": 15300.0,
+    "previous_balance": null,
+    "payment_received": null,
+    "currency": "USD",
+    "po_number": "PO-005",
+    "invoice_status": null,
+    "vendor_gst_number": null,
+    "vendor_address": "5550 Granite Parkway, Suite 105, Plano, Texas, TX 75024, USA",
+    "vendor_email": null,
+    "vendor_phone_number": null,
+    "vendor_id": 5,
+    "line_items": [
+      {
+        "description": "Brochure design",
+        "quantity": 1,
+        "unit_price": 4000.0,
+        "amount": 4000.0
+      },
+      {
+        "description": "Ad design",
+        "quantity": 1,
+        "unit_price": 1500.0,
+        "amount": 1500.0
+      },
+      {
+        "description": "Web design",
+        "quantity": 1,
+        "unit_price": 9800.0,
+        "amount": 9800.0
+      }
+    ],
+    "extra_fields": {
+      "order_date": "2026-04-20",
+      "deliver_date": "2026-04-20",
+      "notes": "Page 1"
+    },
+    "field_confidence": {
+      "vendor_name": 98,
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "billing_period_start": null,
+      "billing_period_end": null,
+      "account_number": null,
+      "customer_name": null,
+      "bill_to_address": 95,
+      "subtotal": 95,
+      "tax_total": null,
+      "total_due": 98,
+      "previous_balance": null,
+      "payment_received": null,
+      "currency": 99,
+      "po_number": 99,
+      "invoice_status": null,
+      "vendor_gst_number": null,
+      "vendor_address": 98,
+      "vendor_email": null,
+      "vendor_phone_number": null
+    },
+    "line_items_confidence": [
+      {
+        "description": 97,
+        "quantity": 97,
+        "unit_price": 97,
+        "amount": 97
+      },
+      {
+        "description": 97,
+        "quantity": 97,
+        "unit_price": 97,
+        "amount": 97
+      },
+      {
+        "description": 97,
+        "quantity": 97,
+        "unit_price": 97,
+        "amount": 97
+      }
+    ],
+    "extra_fields_confidence": {
+      "order_date": 95,
+      "deliver_date": 95,
+      "notes": 95
+    },
+    "raw_text": "# Sales Invoice Template\n\n**SPAR INFORMATION SYSTEMS INDIA PRIVATE LIMITED**\n**PURCHASE ORDER**\nAddress: 5550 Granite Parkway, Suite 105, Plano, Texas, TX 75024, USA\nPurchase order# - PO-005\n\n**Deliver to**\nUnit A4, A-Block, 4th Floor\nIIT Madras Research Park\nKanagam Road, Taramani,\nChennai\n600 113\n\n**Order date:** 20/4/2026\n**Deliver date:** 20/4/2026\n\n| SR.NO | Item description   | Qty | Rate         | Amount       |\n|-------|--------------------|-----|--------------|--------------|\n| 1     | Brochure design     | 1   | $4,000.00   | $4,000.00    |\n| 2     | Ad design           | 1   | $1,500.00   | $1,500.00    |\n| 3     | Web design          | 1   | $9,800.00   | $9,800.00    |\n\n**Total**: $15,300.00\n\n**Notes**\n\nPage 1\n\n\n\nSales Invoice Template\n\nPage 2\n\n\n\nSales Invoice Template\n\nPage 3\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\nPage 6\n\n\n\nSales Invoice Template\n\nPage 7\n\n\n\nSales Invoice Template\n\nPage 8\n\n\n\nSales Invoice Template\n\nPage 9\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\nPage 13\n\n\n\nSales Invoice Template\n\nPage 14\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\n\n\nSales Invoice Template\n\nPage 19\n\n\n\nSales Invoice Template\n\nPage 20\n\n\n\nSales Invoice Template\n\nPage 21\n\n\n\nSales Invoice Template\n\nPage 22\n\n\n\nSales Invoice Template\n\nPage 23\n\n\n\nSales Invoice Template\n\nPage 24\n\n\n\nSales Invoice Template\n\nPage 25\n\n\n\nSales Invoice Template\n\nPage 26\n\n\n\nSales Invoice Template\n\nPage 27\n\n\n\nSales Invoice Template\n\nPage 28\n\n\n\nSales Invoice Template\n\nPage 29\n\n\n\nSales Invoice Template\n\nPage 30\n\n\n\nSales Invoice Template\n\nPage 31\n\n\n\nSales Invoice Template\n\nPage 32",
+    "file_name": "PO_-5.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\c8ed6cd0a4b649deae392484de5967af_PO_-5.pdf",
+    "stored_file_name": "c8ed6cd0a4b649deae392484de5967af_PO_-5.pdf",
+    "invoice_id": 12,
+    "status": "success"
+  },
+  {
+    "vendor_name": "SPAR INFORMATION SYSTEMS LLC",
+    "invoice_number": "2604011",
+    "invoice_date": "2026-04-10",
+    "due_date": "2026-05-25",
+    "billing_period_start": null,
+    "billing_period_end": null,
+    "account_number": null,
+    "customer_name": "American CyberSystems, Inc. dba ACS Solutions",
+    "bill_to_address": "2400 Meadowbrook Parkway Georgia Duluth, GA 30096",
+    "subtotal": 12000.0,
+    "tax_total": null,
+    "total_due": 12000.0,
+    "previous_balance": null,
+    "payment_received": null,
+    "currency": "USD",
+    "po_number": null,
+    "invoice_status": null,
+    "vendor_gst_number": null,
+    "vendor_address": "5550 Granite Parkway Suite 105 Plano, TX 75024",
+    "vendor_email": "spar-finance@sparinfosys.com",
+    "vendor_phone_number": "+918309108105",
+    "vendor_id": 5,
+    "line_items": [
+      {
+        "description": "Christopher M. Folkes",
+        "quantity": 1,
+        "unit_price": 12000.0,
+        "amount": 12000.0
+      }
+    ],
+    "extra_fields": {
+      "terms": "Net 45",
+      "note_to_customer": "Thank you for your business.",
+      "overdue_date": "2026-05-25"
+    },
+    "field_confidence": {
+      "vendor_name": 95,
+      "invoice_number": 95,
+      "invoice_date": 95,
+      "due_date": 95,
+      "billing_period_start": null,
+      "billing_period_end": null,
+      "account_number": null,
+      "customer_name": 80,
+      "bill_to_address": 80,
+      "subtotal": 90,
+      "tax_total": null,
+      "total_due": 90,
+      "previous_balance": null,
+      "payment_received": null,
+      "currency": 90,
+      "po_number": null,
+      "invoice_status": null,
+      "vendor_gst_number": null,
+      "vendor_address": 95,
+      "vendor_email": 95,
+      "vendor_phone_number": 95
+    },
+    "line_items_confidence": [
+      {
+        "description": 95,
+        "quantity": 95,
+        "unit_price": 95,
+        "amount": 95
+      }
+    ],
+    "extra_fields_confidence": {
+      "terms": 90,
+      "note_to_customer": 85,
+      "overdue_date": 90
+    },
+    "raw_text": "```\nI N VO IC E\nSPAR Information Systems LLC       spar-finance@sparinfosys.com\n5550 Granite Parkway Suite 105     +918309108105\nPlano, TX 75024\n\nBill to\nACS Solutions\nAmerican CyberSystems, Inc.\ndba ACS Solutions\n2400 Meadowbrook Parkway\nGeorgia\nDuluth, GA 30096\n\nInvoice details\nInvoice no.: 2604011\nTerms: Net 45\nInvoice date: 04/10/2026\nDue date: 05/25/2026\n\n| #  | Date        | Product or service    | Description                     | Qty | Rate        | Amount      |\n|----|-------------|-----------------------|---------------------------------|-----|-------------|-------------|\n| 1. | 04/10/2026  | Christopher M. Folkes | Christopher M. Folkes           | 1   | $12,000.00  | $12,000.00  |\n\nTotal           $12,000.00\n\nNote to customer\nThank you for your business.                                  Overdue                     05/25/2026\n```",
+    "file_name": "Invoice_2604011.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\9c95dec5ce0640c286a155d582b7877b_Invoice_2604011.pdf",
+    "stored_file_name": "9c95dec5ce0640c286a155d582b7877b_Invoice_2604011.pdf",
+    "invoice_id": 13,
+    "status": "success"
+  },
+  {
+    "vendor_name": "SPAR INFORMATION SYSTEMS LLC",
+    "invoice_number": "2604017",
+    "invoice_date": "2026-04-01",
+    "due_date": "2026-05-01",
+    "billing_period_start": null,
+    "billing_period_end": null,
+    "account_number": null,
+    "customer_name": "Larsen & Toubro Infotech Ltd",
+    "bill_to_address": "2035 Lincoln Highway, Suite 3000/3005, Square west Edison, -08817, Edison, NJ USA",
+    "subtotal": 15000.0,
+    "tax_total": null,
+    "total_due": 15000.0,
+    "previous_balance": null,
+    "payment_received": null,
+    "currency": "USD",
+    "po_number": null,
+    "invoice_status": "Overdue",
+    "vendor_gst_number": null,
+    "vendor_address": "5550 Granite Parkway Suite 105 Plano, TX 75024",
+    "vendor_email": "spar-finance@sparinfosys.com",
+    "vendor_phone_number": "+918309108105",
+    "vendor_id": 5,
+    "line_items": [
+      {
+        "description": "Aaron Charles Cardinale",
+        "quantity": 1,
+        "unit_price": 15000.0,
+        "amount": 15000.0
+      }
+    ],
+    "extra_fields": {
+      "terms": "Net 30",
+      "note": "Thank you for your business."
+    },
+    "field_confidence": {
+      "vendor_name": 98,
+      "invoice_number": 99,
+      "invoice_date": 99,
+      "due_date": 99,
+      "billing_period_start": null,
+      "billing_period_end": null,
+      "account_number": null,
+      "customer_name": 98,
+      "bill_to_address": 95,
+      "subtotal": 99,
+      "tax_total": null,
+      "total_due": 99,
+      "previous_balance": null,
+      "payment_received": null,
+      "currency": 99,
+      "po_number": null,
+      "invoice_status": 90,
+      "vendor_gst_number": null,
+      "vendor_address": 95,
+      "vendor_email": 97,
+      "vendor_phone_number": 96
+    },
+    "line_items_confidence": [
+      {
+        "description": 98,
+        "quantity": 99,
+        "unit_price": 99,
+        "amount": 99
+      }
+    ],
+    "extra_fields_confidence": {
+      "terms": 95,
+      "note": 94
+    },
+    "raw_text": "```\nI N VO IC E\nSPAR Information Systems LLC       spar-finance@sparinfosys.com\n5550 Granite Parkway Suite 105     +918309108105\nPlano, TX 75024\n\nBill to\nLarsen &#x26; Toubro Infotech Ltd\n2035 Lincoln Highway,\nSuite 3000/3005, Square west\nEdison, -08817,\nEdison, NJ USA\n\nInvoice details\nInvoice no.: 2604017\nTerms: Net 30\nInvoice date: 04/01/2026\nDue date: 05/01/2026\n\n| #  | Date       | Product or service       | Description                     | Qty | Rate         | Amount       |\n|----|------------|--------------------------|---------------------------------|-----|--------------|--------------|\n| 1  | 04/01/2026 | Aaron Charles Cardinale   | Aaron Charles Cardinale          | 1   | $15,000.00   | $15,000.00   |\n\nTotal           $15,000.00\nNote to customer\nThank you for your business.                                      Overdue                     05/01/2026\n```",
+    "file_name": "Invoice_2604017.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\872770529e6c45b4b523fe5f974594ed_Invoice_2604017.pdf",
+    "stored_file_name": "872770529e6c45b4b523fe5f974594ed_Invoice_2604017.pdf",
+    "invoice_id": 14,
+    "status": "success"
+  },
+  {
+    "vendor_name": "SPAR INFORMATION SYSTEMS LLC",
+    "invoice_number": "2605017",
+    "invoice_date": "2026-05-01",
+    "due_date": "2026-05-31",
+    "billing_period_start": null,
+    "billing_period_end": null,
+    "account_number": null,
+    "customer_name": "Larsen & Toubro Infotech Ltd",
+    "bill_to_address": "2035 Lincoln Highway, Suite 3000/3005, Square West\nEdison, -08817, Edison, NJ USA",
+    "subtotal": 15000.0,
+    "tax_total": null,
+    "total_due": 15000.0,
+    "previous_balance": null,
+    "payment_received": null,
+    "currency": "USD",
+    "po_number": null,
+    "invoice_status": "Overdue",
+    "vendor_gst_number": null,
+    "vendor_address": "5550 Granite Parkway Suite 105\nPlano, TX 75024",
+    "vendor_email": "spar-finance@sparinfosys.com",
+    "vendor_phone_number": "+918309108105",
+    "vendor_id": 5,
+    "line_items": [
+      {
+        "description": "Aaron Charles Cardinale",
+        "quantity": 1,
+        "unit_price": 15000.0,
+        "amount": 15000.0
+      }
+    ],
+    "extra_fields": {
+      "Terms": "Net 30",
+      "Note to customer": "Thank you for your business."
+    },
+    "field_confidence": {
+      "vendor_name": 95,
+      "invoice_number": 95,
+      "invoice_date": 95,
+      "due_date": 95,
+      "billing_period_start": null,
+      "billing_period_end": null,
+      "account_number": null,
+      "customer_name": 95,
+      "bill_to_address": 95,
+      "subtotal": 95,
+      "tax_total": null,
+      "total_due": 95,
+      "previous_balance": null,
+      "payment_received": null,
+      "currency": 95,
+      "po_number": null,
+      "invoice_status": 95,
+      "vendor_gst_number": null,
+      "vendor_address": 95,
+      "vendor_email": 95,
+      "vendor_phone_number": 95
+    },
+    "line_items_confidence": [
+      {
+        "description": 95,
+        "quantity": 95,
+        "unit_price": 95,
+        "amount": 95
+      }
+    ],
+    "extra_fields_confidence": {
+      "Terms": 95,
+      "Note to customer": 95
+    },
+    "raw_text": "```\nI N VO IC E\nSPAR Information Systems LLC       spar-finance@sparinfosys.com\n5550 Granite Parkway Suite 105     +918309108105\nPlano, TX 75024\n\nBill to\nLarsen &#x26; Toubro Infotech Ltd\n2035 Lincoln Highway,\nSuite 3000/3005, Square West\nEdison, -08817,\nEdison, NJ USA\n\nInvoice details\nInvoice no.: 2605017\nTerms: Net 30\nInvoice date: 05/01/2026\nDue date: 05/31/2026\n\n| #  | Date       | Product or service      | Description                     | Qty | Rate         | Amount       |\n|----|------------|-------------------------|---------------------------------|-----|--------------|--------------|\n| 1  | 05/01/2026 | Aaron Charles Cardinale  | Aaron Charles Cardinale          | 1   | $15,000.00   | $15,000.00   |\n\nTotal           $15,000.00\nNote to customer\nThank you for your business.                                      Overdue                     05/31/2026\n```",
+    "file_name": "Invoice_2605017.pdf",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\7b83f108e2ed45fcbd976ffc83566dfa_Invoice_2605017.pdf",
+    "stored_file_name": "7b83f108e2ed45fcbd976ffc83566dfa_Invoice_2605017.pdf",
+    "invoice_id": 15,
+    "status": "success"
+  },
+  {
+    "vendor_name": "SPAR INFORMATION SYSTEMS LLC",
+    "invoice_number": null,
+    "invoice_date": null,
+    "due_date": null,
+    "billing_period_start": null,
+    "billing_period_end": null,
+    "account_number": null,
+    "customer_name": null,
+    "bill_to_address": null,
+    "subtotal": null,
+    "tax_total": null,
+    "total_due": null,
+    "previous_balance": null,
+    "payment_received": null,
+    "currency": "USD",
+    "po_number": null,
+    "invoice_status": null,
+    "vendor_gst_number": null,
+    "vendor_address": null,
+    "vendor_email": null,
+    "vendor_phone_number": null,
+    "vendor_id": 5,
+    "line_items": [],
+    "extra_fields": {},
+    "field_confidence": {
+      "vendor_name": null,
+      "invoice_number": null,
+      "invoice_date": null,
+      "due_date": null,
+      "billing_period_start": null,
+      "billing_period_end": null,
+      "account_number": null,
+      "customer_name": null,
+      "bill_to_address": null,
+      "subtotal": null,
+      "tax_total": null,
+      "total_due": 50,
+      "previous_balance": null,
+      "payment_received": null,
+      "currency": null,
+      "po_number": null,
+      "invoice_status": null,
+      "vendor_gst_number": null,
+      "vendor_address": null,
+      "vendor_email": null,
+      "vendor_phone_number": null,
+      "line_items": null,
+      "extra_fields": null
+    },
+    "line_items_confidence": [],
+    "extra_fields_confidence": {},
+    "raw_text": "Vendor name - spar information systems LLC\n\nTo keep Amazon Personalize v2 costs predictable while improving application performance and user experience, the recommended approach is to move from calling the recommendation API after every swipe to a batch and cache architecture. The application should retrieve 30 to 50 recommended profiles in a single API call and store them temporarily on the user device or in the backend cache. Profiles can then be displayed instantly as the user swipes, without making another network request. A new request should be made only when the cached recommendations are nearly exhausted or when the user refreshes the application. This approach can significantly reduce API usage while delivering a faster and smoother experience. Cost monitoring should be implemented from the first day. AWS Budgets can provide alerts when actual or forecasted spending reaches 50 percent, 80 percent, and 100 percent of the approved monthly budget. CloudWatch alarms should monitor inference activity and traffic spikes so that unusual API usage can be detected quickly. All Personalize resources should also be tagged by environment, such as Development, Testing, and Production, to provide clear cost visibility. A maximum transaction rate should be configured for the Personalize campaign. This will protect the application from unexpected cost increases caused by software defects, automated traffic, or abnormal usage. When the limit is reached, the application should handle throttled requests gracefully by using cached recommendations and retrying later.\n\n\n\nBatch inference should be used for features that do not require immediate recommendations, such as daily profile suggestions, email campaigns, and push notifications. This avoids unnecessary pressure on the real time recommendation service and helps control peak traffic. Model retraining should be scheduled according to business requirements rather than performed too frequently. For this use case, retraining every 24 to 48 hours should generally provide a good balance between recommendation freshness and operating cost. Incremental interaction data should be processed wherever possible instead of repeatedly loading the complete historical dataset. The backend should also verify whether eligible profiles are available before calling Amazon Personalize. If the user has already viewed all suitable profiles within the selected location and preferences, the application should display an appropriate message or suggest expanding the search criteria instead of making an unnecessary API request. In the proposed architecture, one API request retrieves a deck of recommendations, multiple swipes are served from the cache, and another request is made only when additional profiles are required. Batch jobs support scheduled recommendations, while controlled retraining keeps the model current.\n\n----\n\n**Amazon Personalize v2 Cost Optimization - Developers**\n\nImplement Amazon Personalize v2 while strictly controlling inference costs and minimizing swipe latency.\n\n### 1. Architecture Overview and Core Philosophy\nTo keep costs low and user experience snappy, we are shifting from a \"Call-on-Swipe\" model to a \"Batch-and-Cache\" model.\n- **Rule 1:** The Personalize API is never called on a single swipe.\n- **Rule 2:** We never pay for an API call if the user has no valid matches (Fail-Fast).\n- **Rule 3:** Non-real-time features (Daily Picks) use Batch Inference, not real-time API calls.\n\n### 2. Mobile and Frontend Implementation: Deck Caching\n**Goal:** Eliminate network latency during swiping and reduce API calls by up to 95 percent.\n- **Initial Load and Refresh:** When the user opens the app or pulls to refresh, request a \"deck\" of profiles from the backend.\n- **Local State:** Store the returned array of 30 to 50 profiles in local memory or cache.\n\n\n\nNO_CONTENT_HERE\n\n\n\nAction: When creating the Campaign via AWS Console or CLI, set Maximum Provisioned TPS to 50.\nResult: If traffic exceeds this, AWS returns a 429 Too Many Requests error instead of scaling up the bill.\n\n### B. Batch Inference for Daily Picks\nDo not use real-time endpoints for push notifications or email digests.\n**Action:** Create a nightly CreateBatchInferenceJob.\n**Input:** S3 JSON file containing a list of active user IDs.\n**Output:** S3 JSON file containing 5 recommended user IDs per user.\n**Workflow:** Backend reads the S3 output in the morning and triggers Firebase Push Notifications.\n\n### C. Incremental Retraining Pipeline\n**Action:** Configure EventBridge to trigger a Lambda function every 24 hours (e.g., 03:00 AM UTC).\n**Logic:** Export only new interactions (likes, swipes, messages) from MySQL to S3 since the last run.\nTrigger CreateSolutionVersion.\n**Why:** Prevents re-uploading the entire interaction history daily, saving training costs.\n\n### 5. Monitoring and Alerting\n**Goal:** Zero surprises on the AWS bill.\n1. **AWS Budgets:** Create a budget for the Personalize service. Set alerts to the engineering Slack channel at 50 percent, 80 percent, and 100 percent of the projected monthly spend.\n2. **CloudWatch Alarms:** Create an alarm on the InferenceTransactions metric. If TPS spikes above 40 for more than 5 minutes, page the on-call engineer.\n\n### 6. Definition of Done (PR Checklist)\n- Mobile: Swipe deck caches locally; API is only called to fetch batches, not per swipe.\n- Backend: Pre-filter check implemented to skip Personalize API calls when no valid database candidates exist.\n- Backend: API calls request numResults greater than or equal to 30.\n- DevOps: Campaign created with a strict Maximum Provisioned TPS (e.g., 50).\n- DevOps: AWS Budget and CloudWatch TPS alarms configured and routed to Slack.\n- DevOps: Nightly Batch Inference job configured for Daily Picks.\n- DevOps: 24-hour incremental retraining cron job active.",
+    "file_name": "v2_v2.docx",
+    "file_path": "C:\\Users\\SPAR-PUNE-042\\Downloads\\VIM\\uploads\\invoices\\5de91d61bf5f4a09b5f0be442621596a_v2_v2.docx",
+    "_validation_issues": [
+      "total_due is null \u2014 check source document / vision output"
+    ],
+    "stored_file_name": "5de91d61bf5f4a09b5f0be442621596a_v2_v2.docx",
+    "invoice_id": 16,
+    "status": "needs_review"
   }
 ]

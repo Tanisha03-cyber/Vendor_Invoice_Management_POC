@@ -99,6 +99,13 @@ def register_routes(app):
     def admin_activities():
         return render_template('vim_admin_dashboard.html')
 
+    @app.route('/admin/dashboard')
+    @admin_required
+    def admin_kpi_dashboard():
+        from vim.dashboard.service import get_dashboard_metrics
+        metrics = get_dashboard_metrics()
+        return render_template('vim_admin_kpi_dashboard.html', metrics=metrics)
+
     @app.route('/admin/issues', methods=['GET', 'POST'])
     @admin_required
     def admin_vim_issues():
@@ -676,3 +683,274 @@ def register_routes(app):
         print("Invoice Validation - records displayed:",len(rows))
 
         return render_template("invoice_validation.html",validation_results=rows)
+
+
+    # ─────────────────────────────────────────────────────────────────────────────
+    # RAG — AI Assistant  (ChromaDB + CrewAI + Gemini)
+    # ─────────────────────────────────────────────────────────────────────────────
+
+    @app.route('/admin/ai_assistant', methods=['GET'])
+    @admin_required
+    def admin_ai_assistant():
+        """Landing page: vendor selector + per-vendor RAG stats."""
+        from vim.rag.store import get_vendor_data
+        vendors = Vendor.query.order_by(Vendor.VendorName).all()
+
+        vendor_id = request.args.get('vendor_id', '').strip().lower().replace(' ', '_')
+        data = None
+        selected_vendor = None
+        if vendor_id:
+            try:
+                data = get_vendor_data(vendor_id)
+            except Exception as e:
+                flash(f"RAG store error: {e}", "danger")
+            selected_vendor = vendor_id
+
+        return render_template(
+            'vim_rag_assistant.html',
+            vendors=vendors,
+            selected_vendor=selected_vendor,
+            data=data,
+        )
+
+    @app.route('/admin/rag_ingest', methods=['POST'])
+    @admin_required
+    def admin_rag_ingest():
+        """Ingest PDF/TXT invoice files or pasted text into ChromaDB."""
+        import io as _io
+        from pathlib import Path as _Path
+        from vim.rag.store import ingest_invoice
+
+        vendor_id = request.form.get('vendor_id', '').strip().lower().replace(' ', '_')
+        invoice_number = request.form.get('invoice_number', '').strip()
+        raw_text = request.form.get('raw_text', '').strip()
+        files = request.files.getlist('invoice_files')
+        results = []
+
+        if files:
+            for f in files:
+                if not f.filename:
+                    continue
+                stem = _Path(f.filename).stem
+                inv_num = invoice_number if invoice_number else stem
+                content = f.read()
+
+                text = ""
+                if f.filename.lower().endswith('.pdf'):
+                    try:
+                        from pypdf import PdfReader
+                        reader = PdfReader(_io.BytesIO(content))
+                        text = "\n".join(page.extract_text() or "" for page in reader.pages)
+                    except Exception as e:
+                        results.append(f"❌ <b>{f.filename}</b>: PDF extraction error — {e}")
+                        continue
+                elif f.filename.lower().endswith('.txt'):
+                    text = content.decode('utf-8', errors='replace')
+                else:
+                    results.append(f"❌ <b>{f.filename}</b>: Unsupported format (use PDF or TXT).")
+                    continue
+
+                if not text.strip():
+                    results.append(f"❌ <b>{f.filename}</b>: File was empty.")
+                    continue
+
+                try:
+                    chunks = ingest_invoice(tenant_id=vendor_id, invoice_number=inv_num, text=text)
+                    results.append(
+                        f"✅ <b>{f.filename}</b> (Invoice: <code>{inv_num}</code>) "
+                        f"→ Indexed <b>{chunks}</b> chunk(s) under <code>vendor_id='{vendor_id}'</code>"
+                    )
+                except Exception as e:
+                    results.append(f"❌ <b>{f.filename}</b>: Ingestion error — {e}")
+
+        if raw_text:
+            inv_num = invoice_number if invoice_number else "PASTED-INV"
+            try:
+                chunks = ingest_invoice(tenant_id=vendor_id, invoice_number=inv_num, text=raw_text)
+                results.append(
+                    f"✅ Pasted Text (Invoice: <code>{inv_num}</code>) "
+                    f"→ Indexed <b>{chunks}</b> chunk(s) under <code>vendor_id='{vendor_id}'</code>"
+                )
+            except Exception as e:
+                results.append(f"❌ Pasted Text Error: {e}")
+
+        if not results:
+            results.append("⚠️ No files or text were provided.")
+
+        vendors = Vendor.query.order_by(Vendor.VendorName).all()
+        return render_template(
+            'vim_rag_ingest_results.html',
+            vendor_id=vendor_id,
+            results=results,
+            vendors=vendors,
+        )
+
+    @app.route('/admin/rag_query', methods=['POST'])
+    @admin_required
+    def admin_rag_query():
+        """Query the RAG — retrieves from ChromaDB then synthesizes via CrewAI."""
+        from vim.rag.store import retrieve_chunks
+        from vim.rag.query_crew import QueryCrew
+
+        vendor_id = request.form.get('vendor_id', '').strip().lower().replace(' ', '_')
+        query = request.form.get('query', '').strip()
+        invoice_filter = request.form.get('invoice_filter', '').strip() or None
+
+        if not vendor_id or not query:
+            flash("Vendor and question are required.", "warning")
+            return redirect(url_for('admin_ai_assistant'))
+
+        # Retrieve raw chunks
+        raw_chunks = []
+        try:
+            raw_chunks = retrieve_chunks(
+                tenant_id=vendor_id,
+                query=query,
+                invoice_number=invoice_filter,
+                top_k=3,
+            )
+            for c in raw_chunks:
+                dist = c.get("distance")
+                c["score_str"] = f"{1 - dist:.3f}" if dist is not None else "N/A"
+        except Exception as e:
+            flash(f"Retrieval error: {e}", "danger")
+
+        # Synthesize with CrewAI
+        answer = ""
+        try:
+            crew = QueryCrew()
+            answer = crew.run(
+                tenant_id=vendor_id,
+                query=query,
+                invoice_number=invoice_filter,
+            )
+        except Exception as e:
+            answer = f"Agent execution error: {e}"
+
+        vendors = Vendor.query.order_by(Vendor.VendorName).all()
+        return render_template(
+            'vim_rag_query_results.html',
+            vendor_id=vendor_id,
+            query=query,
+            filter_display=invoice_filter or "All Invoices",
+            answer=answer,
+            raw_chunks=raw_chunks,
+            vendors=vendors,
+        )
+
+    # ─────────────────────────────────────────────────────────────────────────────
+    # VALIDATION ISSUES API  (serves the Event Browser on /admin/issues)
+    # Reads from the main vim_database.sqlite → validation_result table
+    # ─────────────────────────────────────────────────────────────────────────────
+
+    @app.route('/api/validation/results', methods=['GET'])
+    @admin_required
+    def api_validation_list():
+        """Paginated, filtered list of ValidationResult records."""
+        from vim_database.models import ValidationResult
+        from datetime import datetime, timedelta
+        from sqlalchemy import or_
+
+        q           = request.args.get('q', '').strip()
+        status      = request.args.get('status', '').strip()
+        vtype       = request.args.get('type', '').strip()
+        time_range  = request.args.get('time', '').strip()
+        page        = max(1, int(request.args.get('page', 1)))
+        page_size   = min(500, max(1, int(request.args.get('page_size', 25))))
+
+        from flask import jsonify as _jsonify
+        query = db.session.query(ValidationResult)
+
+        if q:
+            like = f"%{q}%"
+            query = query.filter(
+                or_(
+                    ValidationResult.InvoiceNumber.ilike(like),
+                    ValidationResult.ValidationID.cast(db.String).ilike(like),
+                )
+            )
+        if status:
+            query = query.filter(ValidationResult.ValidationStatus == status)
+        if vtype:
+            query = query.filter(ValidationResult.ValidationType == vtype)
+        if time_range:
+            time_map = {
+                '15m': timedelta(minutes=15),
+                '1h':  timedelta(hours=1),
+                '24h': timedelta(hours=24),
+                '3d':  timedelta(days=3),
+            }
+            delta = time_map.get(time_range)
+            if delta:
+                cutoff = datetime.utcnow() - delta
+                query = query.filter(ValidationResult.ValidationDate >= cutoff)
+
+        total = query.count()
+        records = (
+            query.order_by(ValidationResult.ValidationDate.desc())
+            .offset((page - 1) * page_size)
+            .limit(page_size)
+            .all()
+        )
+
+        items = []
+        for r in records:
+            items.append({
+                'id':              r.ValidationID,
+                'invoice_id':      r.InvoiceID,
+                'invoice_number':  r.InvoiceNumber,
+                'validation_type': r.ValidationType,
+                'status':          r.ValidationStatus,
+                'message':         r.ValidationMessage,
+                'details':         r.ValidationDetails,
+                'validation_date': r.ValidationDate.isoformat() if r.ValidationDate else None,
+            })
+
+        return _jsonify({
+            'total':     total,
+            'page':      page,
+            'page_size': page_size,
+            'items':     items,
+        })
+
+    @app.route('/api/validation/results/<int:validation_id>', methods=['GET'])
+    @admin_required
+    def api_validation_detail(validation_id):
+        """Return full detail for a single ValidationResult record."""
+        from vim_database.models import ValidationResult
+        from flask import jsonify as _jsonify
+
+        r = db.session.get(ValidationResult, validation_id)
+        if not r:
+            return _jsonify({'error': 'Validation result not found'}), 404
+
+        return _jsonify({
+            'id':              r.ValidationID,
+            'invoice_id':      r.InvoiceID,
+            'invoice_number':  r.InvoiceNumber,
+            'validation_type': r.ValidationType,
+            'status':          r.ValidationStatus,
+            'message':         r.ValidationMessage,
+            'details':         r.ValidationDetails,
+            'validation_date': r.ValidationDate.isoformat() if r.ValidationDate else None,
+        })
+
+    @app.route('/api/validation/facets', methods=['GET'])
+    @admin_required
+    def api_validation_facets():
+        """Distinct values for ValidationStatus and ValidationType filter dropdowns."""
+        from vim_database.models import ValidationResult
+        from flask import jsonify as _jsonify
+
+        statuses = [
+            r[0] for r in
+            db.session.query(ValidationResult.ValidationStatus).distinct().all()
+            if r[0]
+        ]
+        types = [
+            r[0] for r in
+            db.session.query(ValidationResult.ValidationType).distinct().all()
+            if r[0]
+        ]
+
+        return _jsonify({'statuses': statuses, 'types': types})
